@@ -1,3 +1,3 @@
 ## portfolio
 
-https://sunminigo.github.io/works/
+https://sunminigo.github.io/works/dist/index.html
