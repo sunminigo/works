@@ -78,7 +78,6 @@
 		align-items: center;
 		width: calc(100% / 4);
 		margin: 10px 0;
-
 		font-size: 16px;
 		font-weight: 600;
 	}
@@ -105,17 +104,16 @@
 		margin-top: 50px;
 		font-size: 16px;
 
-		li {
+		& > li {
 			display: flex;
-			justify-content: space-between;
 			align-items: center;
-			height: 500px;
-			padding: 50px 0;
+			flex-wrap: wrap;
+			padding: 100px 0;
 			border-bottom: 1px solid #eee;
 			box-sizing: content-box;
 
 			& > div {
-				flex: 1;
+				width: 100%;
 			}
 
 			h3 {
@@ -144,15 +142,90 @@
 			.hash {
 				color: #aaa;
 			}
+			.go_site {
+				border: 1px solid #eee;
+				border-radius: 30px;
+			}
 		}
 		.img_box {
+			margin-top: 50px;
+
 			img {
-				width: 100%;
+				max-width: 100%;
+				width: auto;
+    		margin: 0 auto;
+				transform-origin: 50% 50%;
+				transform: scale(0.88);
+				transition: transform 0.5s linear;
 				border-radius: 15px;
 				-webkit-border-radius: 15px;
 				-moz-border-radius: 15px;
 				-ms-border-radius: 15px;
 				-o-border-radius: 15px;
+			}
+
+		}
+	}
+	.slider {
+		padding: 0 0 2vh;
+		touch-action: auto !important;
+		-ms-touch-action: pan-y;
+		touch-action: pan-y;
+
+		.slick-slide {
+			position: relative;
+			touch-action: auto;
+			-ms-touch-action: auto;
+
+			.content {
+				position: absolute;
+				bottom: 1.688rem; //27px
+				left: 1.063rem; //17px
+				opacity: 0;
+				transition: opacity 0.5s linear;
+
+				p {
+					color: #fff;
+				}
+				.main_txt {
+					font-size: 2.813rem; //45px
+					font-weight: bold;
+				}
+				.sub_txt {
+					font-size: 1.75rem; //28px
+					font-weight: light;
+				}
+			}
+			&.slick-center {
+				img {
+					transform: scale(1);
+					transition: transform 0.5s linear;
+					-webkit-transition: transform 0.5s linear;
+					-moz-transition: transform 0.5s linear;
+					-ms-transition: transform 0.5s linear;
+					-o-transition: transform 0.5s linear;
+				}
+
+				.content {
+					opacity: 1;
+					transition: opacity 0.5s linear;
+				}
+			}
+		}
+		.slick-dots {
+			bottom: -15px;
+			li {
+				&.slick-active {
+					button:before {
+						content: '●';
+					}
+				}
+				button:before {
+					content: '○';
+					color: #a8a8a8 !important;
+					opacity: 1;
+					font-size: 0.563rem;
+				}
 			}
 		}
 	}
