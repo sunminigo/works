@@ -2,9 +2,9 @@ $(()=>{
 	$('.slider').slick({
 		lazyLoad: 'ondemand',
 		infinite: true,
-		dots: true,
+		dots: false,
 		draggable: true,
-		arrows: true,
+		arrows: false,
 		adaptiveHeight: true,
 		centerMode: true,
 		centerPadding: '10%',
