@@ -119,7 +119,6 @@
 			& > div {
 				width: 100%;
 			}
-
 			h3 {
 				font-size: 30px;
 				font-weight: bold;
@@ -158,7 +157,7 @@
 				padding: 10px;
 				border-radius: 10px;
 				background: #fff;
-				box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+				box-shadow: rgb(100 100 111 / 20%) 1px 5px 15px -2px;
 				transition: all .1s ease-in-out;
 				
 				&:hover {
@@ -167,13 +166,14 @@
 			}
 		}
 		.img_box {
+			max-height: 500px;
 			margin-top: 50px;
 
 			img {
 				max-width: 100%;
 				width: auto;
-				max-height: 500px;
-    		    margin: 0 auto;
+				max-height: 400px;
+				margin: 0 auto;
 				transform-origin: 50% 50%;
 				transform: scale(0.88);
 				transition: transform 0.5s linear;
@@ -186,7 +186,6 @@
 		}
 	}
 	.slider {
-		padding: 0 0 2vh;
 		touch-action: auto !important;
 		-ms-touch-action: pan-y;
 		touch-action: pan-y;
@@ -196,25 +195,6 @@
 			touch-action: auto;
 			-ms-touch-action: auto;
 
-			.content {
-				position: absolute;
-				bottom: 1.688rem; //27px
-				left: 1.063rem; //17px
-				opacity: 0;
-				transition: opacity 0.5s linear;
-
-				p {
-					color: #fff;
-				}
-				.main_txt {
-					font-size: 2.813rem; //45px
-					font-weight: bold;
-				}
-				.sub_txt {
-					font-size: 1.75rem; //28px
-					font-weight: light;
-				}
-			}
 			&.slick-center {
 				img {
 					transform: scale(1);
@@ -223,11 +203,6 @@
 					-moz-transition: transform 0.5s linear;
 					-ms-transition: transform 0.5s linear;
 					-o-transition: transform 0.5s linear;
-				}
-
-				.content {
-					opacity: 1;
-					transition: opacity 0.5s linear;
 				}
 			}
 		}
@@ -247,6 +222,31 @@
 				}
 			}
 		}
+		.slick-arrow {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			padding: 10px;
+			z-index: 999;
+			background: transparent;
+			font-size: 20px;
+			transition:	background .3s ease-in-out;
+
+			&.slick-prev {
+				left: 0;
+
+				&:hover {
+					background: linear-gradient(to right, rgba(0,0,0,.1), rgba(0,0,0,0));
+				}
+			}
+			&.slick-next {
+				right: 0;
+
+				&:hover {
+					background: linear-gradient(to left, rgba(0,0,0,.1), rgba(0,0,0,0));
+				}
+			}
+		}
 	}
 }
 @media screen and (max-width: 640px) {
@@ -255,10 +255,6 @@
 			li {
 				height: auto;
 				flex-direction: column;
-
-				.img_box {
-					margin-top: 50px;
-				}
 			}
 		}
 	}
