@@ -157,7 +157,7 @@
 				padding: 10px;
 				border-radius: 10px;
 				background: #fff;
-				box-shadow: rgb(100 100 111 / 20%) 1px 5px 15px -2px;
+				box-shadow: rgba(100, 100, 111, .2) 1px 5px 15px -2px;
 				transition: all .1s ease-in-out;
 				
 				&:hover {
@@ -166,22 +166,21 @@
 			}
 		}
 		.img_box {
-			max-height: 500px;
 			margin-top: 50px;
 
 			img {
 				max-width: 100%;
 				width: auto;
-				max-height: 400px;
+				max-height: 800px;
 				margin: 0 auto;
 				transform-origin: 50% 50%;
 				transform: scale(0.88);
 				transition: transform 0.5s linear;
-				border-radius: 15px;
-				-webkit-border-radius: 15px;
-				-moz-border-radius: 15px;
-				-ms-border-radius: 15px;
-				-o-border-radius: 15px;
+				border-radius: 5px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				-ms-border-radius: 5px;
+				-o-border-radius: 5px;
 			}
 		}
 	}
