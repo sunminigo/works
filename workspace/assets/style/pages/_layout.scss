@@ -166,6 +166,16 @@
 			}
 			.hash {
 				color: #aaa;
+
+				> span {
+					width: auto;
+					margin: 0 0 10px;
+					padding: 3px 10px;
+					border-radius: 20px;
+					background-color: #999;
+					color: #fff;
+					font-weight: 400;
+				}
 			}
 		}
 		.go_site {
@@ -175,11 +185,11 @@
 				padding: 10px;
 				border-radius: 10px;
 				background: #fff;
-				box-shadow: rgba(100, 100, 111, .2) 1px 5px 15px -2px;
+				box-shadow: rgba(100, 100, 111, .3) 1px 5px 15px -2px;
 				transition: all .1s ease-in-out;
 				
 				&:hover {
-					box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 10px 0px;
+					box-shadow: rgba(100, 100, 111, 0.3) 0px 3px 10px 0px;
 				}
 			}
 		}
