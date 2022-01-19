@@ -13,22 +13,18 @@ const gulp = require('gulp'),
 const PATH = {
 		HTML: './workspace/html',
 		ASSETS: {
-			FONTS: './workspace/assets/fonts',
 			IMAGES: './workspace/assets/images',
 			STYLE: './workspace/assets/style',
 			SCRIPT: './workspace/assets/script',
-			LIB: './workspace/assets/lib',
 		},
 	},
 	// 산출물 경로
 	DEST_PATH = {
 		HTML: './dist',
 		ASSETS: {
-			FONTS: './dist/assets/fonts',
 			IMAGES: './dist/assets/images',
 			STYLE: './dist/assets/style',
 			SCRIPT: './dist/assets/script',
-			LIB: './dist/assets/lib',
 		},
 	};
 
@@ -72,18 +68,6 @@ gulp.task('scss:compile', () => {
 	});
 });
 
-/*
-gulp.task( 'html', () => {
-	return new Promise( resolve => {
-		gulp.src( PATH.HTML + '/!**!/!*.html' )
-				.pipe( gulp.dest( DEST_PATH.HTML ) )
-				.pipe( browserSync.reload({stream: true}) );
-
-		resolve();
-	});
-});
-*/
-
 gulp.task('nodemon:start', () => {
 	return new Promise((resolve) => {
 		nodemon({
@@ -102,24 +86,6 @@ gulp.task('script:concat', () => {
 			.pipe(concat('common.js'))
 			.pipe(gulp.dest(DEST_PATH.ASSETS.SCRIPT))
 			.pipe(browserSync.reload({ stream: true }));
-
-		resolve();
-	});
-});
-
-gulp.task('library', () => {
-	return new Promise((resolve) => {
-		gulp.src(PATH.ASSETS.LIB + '/*.js').pipe(gulp.dest(DEST_PATH.ASSETS.LIB));
-
-		resolve();
-	});
-});
-
-gulp.task('fonts', () => {
-	return new Promise((resolve) => {
-		gulp
-			.src(PATH.ASSETS.FONTS + '/*.*')
-			.pipe(gulp.dest(DEST_PATH.ASSETS.FONTS));
 
 		resolve();
 	});
@@ -182,8 +148,6 @@ const ALL_SERIES = gulp.series([
 	'scss:compile',
 	'html-include',
 	'script:concat',
-	'fonts',
-	'library',
 	'nodemon:start',
 	'browserSync',
 	'watch',
