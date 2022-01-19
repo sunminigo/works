@@ -144,7 +144,6 @@
 				width: 100%;
 			}
 			h3 {
-				padding: 0 25px;
 				font-size: 30px;
 				font-weight: bold;
 
@@ -157,8 +156,6 @@
 			}
 		}
 		.intro_box {
-			padding: 0 25px;
-
 			& > li {
 				margin-bottom: 6px;
 				span {
@@ -186,8 +183,6 @@
 			}
 		}
 		.go_site {
-			margin: 0 25px;
-
 			a {
 				padding: 10px 16px;
 				border-radius: 10px;
@@ -297,6 +292,13 @@
 			li {
 				height: auto;
 				flex-direction: column;
+
+				h3, .intro_box {
+					padding: 0 25px;
+				}
+				.go_site {
+					margin: 0 25px;
+				}
 			}
 		}
 	}
