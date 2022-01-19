@@ -121,11 +121,13 @@
 	project
 ------------------*/
 .projects {
-	max-width: 1200px;
-	margin: 0 auto;
 	padding: 50px 0 !important;
 	background: #fefef8;
 
+	div {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
 	.project_list {
 		line-height: 1.5;
 		font-size: 16px;
