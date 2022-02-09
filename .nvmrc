@@ -1,0 +1,17 @@
+node v14.2.0
+npm 6.14.14
+
+// package json update
+1) npm install -g npm-check-updates
+2) npm-check-updates -u
+3) rm -fr node_modules
+4) npm install
+
+// 사스에러
+npm install --save-dev sass
+후
+scss = require("gulp-sass")(require('sass')),
+로 변경
+
+// 이미지 에러
+"gulp-imagemin": "^7.1.0", 로 다운그레이드
