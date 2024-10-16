@@ -27,19 +27,19 @@ body {
 
 @media screen and (max-width: 640px) {
 	html,
-body {
+	body {
 		font-size: 13px;
 	}
 }
 @media screen and (max-width: 480px) {
 	html,
-body {
+	body {
 		font-size: 10px;
 	}
 }
 @media screen and (max-width: 360px) {
 	html,
-body {
+	body {
 		font-size: 8px;
 	}
 }
@@ -478,13 +478,13 @@ img {
 	left: 0;
 }
 .projects .slider .slick-arrow.slick-prev:hover {
-	background: linear-gradient(to right, white, rgba(255, 255, 255, 0.1));
+	background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.1));
 }
 .projects .slider .slick-arrow.slick-next {
 	right: 0;
 }
 .projects .slider .slick-arrow.slick-next:hover {
-	background: linear-gradient(to left, white, rgba(255, 255, 255, 0.1));
+	background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0.1));
 }
 .projects .slider .slick-arrow.slick-disabled {
 	display: none !important;
